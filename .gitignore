@@ -9,3 +9,6 @@ coverage/
 .DS_Store
 Thumbs.db
 .idea/
+
+playwright-report/
+test-results/
