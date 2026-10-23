@@ -101,3 +101,22 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
   .viewport-label { left: 12px; top: 12px; }.dialog { padding: 18px; }.dialog-actions button { flex: 1; }.mode-placeholder { padding: 18px; }.mode-placeholder h2 { font-size: 20px; } footer { line-height: 1.5; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+/* Mechanical assembly tools, V0.1.1 */
+.connection-builder { padding: 16px; background: #122c39; border: 1px solid #39818a; }
+.connection-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.connection-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 16px; }
+.connection-grid label, .joint-inspector > label, .frame-editors label { display: grid; gap: 6px; font-size: 11px; color: #a6bdca; margin-bottom: 10px; }
+.connection-grid fieldset { min-width: 0; }.connection-grid .primary { width: 100%; }
+.constraint-status { border: 1px solid #356b72; background: #19383e; color: #a4dde0; border-radius: 6px; padding: 10px; font-size: 11px; line-height: 1.7; }
+.joint-inspector, .frame-editors { display: grid; gap: 14px; }
+.joint-inspector h3 { margin: 0; }.joint-control button { width: 100%; margin: 8px 0 12px; }
+.frame-editors { padding: 10px 0; }.frame-editors fieldset > div { margin-top: 10px; }
+.joint-list { display: grid; gap: 5px; }.joint-list button { display: grid; gap: 5px; text-align: left; overflow-wrap: anywhere; }.joint-list strong { color: #7cd2df; font-size: 10px; }.joint-list span { font-size: 11px; }
+.mount-label { color: #ffdd99; background: #152832dd; padding: 3px 5px; border-radius: 4px; white-space: nowrap; font-size: 11px; }
+input:disabled, select:disabled { opacity: .55; cursor: not-allowed; }
+.workspace-tools > button, .error-banner, .dialog p { overflow-wrap: anywhere; max-width: 100%; }
+@media (max-width: 760px) {
+  .workspace-tools .tool-group { grid-template-columns: 1fr 1fr; }
+  .connection-grid { grid-template-columns: 1fr; gap: 16px; }.connection-builder { padding: 12px; }
+  .connection-grid select { font-size: 16px; }.joint-inspector > label, .connection-grid label { font-size: 12px; }
+}
