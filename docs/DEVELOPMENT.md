@@ -33,3 +33,7 @@ npm run build
 ## V0.1
 
 Работает 3D-конструктор и хранение проектов. Устройство модулей описано в `ARCHITECTURE.md`, сценарии Android/Codespaces и ограничения — в [V0.1.md](V0.1.md).
+
+## V0.1.1
+
+Кинематическое ядро находится в `src/domain/mechanics.ts`; его инварианты проверяются в `mechanics.test.ts`. Исторические JSON V0.1 записаны в `tests/fixtures/` из кода `main` до изменений. Дополнительные браузерные сценарии — `tests/mechanics.e2e.ts`. Руководство и перенос через Android/Codespaces: [V0.1.1](V0.1.1.md).

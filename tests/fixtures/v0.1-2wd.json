@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "id": "v0.1-2wd",
+  "name": "Колёсный робот 2WD",
+  "templateId": "robot-2wd",
+  "components": [
+    {
+      "id": "chassis",
+      "definitionId": "chassis",
+      "name": "Шасси 2WD",
+      "type": "structure",
+      "dimensions": [
+        0.14,
+        0.006,
+        0.2
+      ],
+      "position": [
+        0,
+        0.065,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.003,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.003,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-left",
+      "definitionId": "wheel",
+      "name": "Ведущее колесо",
+      "type": "structure",
+      "dimensions": [
+        0.025,
+        0.066,
+        0.066
+      ],
+      "position": [
+        -0.09,
+        0.033,
+        -0.035
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.033,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.033,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wheel-right",
+      "definitionId": "wheel",
+      "name": "Ведущее колесо",
+      "type": "structure",
+      "dimensions": [
+        0.025,
+        0.066,
+        0.066
+      ],
+      "position": [
+        0.09,
+        0.033,
+        -0.035
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.033,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.033,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motor-left",
+      "definitionId": "tt-motor",
+      "name": "TT-мотор",
+      "type": "actuator",
+      "dimensions": [
+        0.036,
+        0.025,
+        0.055
+      ],
+      "position": [
+        -0.052,
+        0.037,
+        -0.035
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0125,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0125,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motor-right",
+      "definitionId": "tt-motor",
+      "name": "TT-мотор",
+      "type": "actuator",
+      "dimensions": [
+        0.036,
+        0.025,
+        0.055
+      ],
+      "position": [
+        0.052,
+        0.037,
+        -0.035
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0125,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0125,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caster",
+      "definitionId": "caster",
+      "name": "Задняя опора",
+      "type": "structure",
+      "dimensions": [
+        0.028,
+        0.035,
+        0.028
+      ],
+      "position": [
+        0,
+        0.0175,
+        0.075
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uno",
+      "definitionId": "uno",
+      "name": "Arduino UNO R3",
+      "type": "electronics",
+      "dimensions": [
+        0.053,
+        0.018,
+        0.069
+      ],
+      "position": [
+        0,
+        0.077,
+        0.035
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.009,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.009,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "driver",
+      "definitionId": "l298n",
+      "name": "Драйвер L298N",
+      "type": "electronics",
+      "dimensions": [
+        0.043,
+        0.03,
+        0.043
+      ],
+      "position": [
+        0,
+        0.083,
+        -0.048
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.015,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.015,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

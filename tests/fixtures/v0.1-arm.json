@@ -1,0 +1,591 @@
+{
+  "schemaVersion": 1,
+  "id": "v0.1-arm",
+  "name": "Рука-манипулятор",
+  "templateId": "robot-arm",
+  "components": [
+    {
+      "id": "base",
+      "definitionId": "base",
+      "name": "Основание",
+      "type": "structure",
+      "dimensions": [
+        0.13,
+        0.018,
+        0.13
+      ],
+      "position": [
+        0,
+        0.009,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.009,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.009,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "definitionId": "platform",
+      "name": "Поворотная платформа",
+      "type": "joint",
+      "dimensions": [
+        0.08,
+        0.015,
+        0.08
+      ],
+      "position": [
+        0,
+        0.0165,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "base",
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0075,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0075,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shoulder",
+      "definitionId": "joint",
+      "name": "Шарнир",
+      "type": "joint",
+      "dimensions": [
+        0.044,
+        0.035,
+        0.035
+      ],
+      "position": [
+        0,
+        0.026,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "platform",
+      "parameters": {
+        "angle": -0.25
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "servo-shoulder",
+      "definitionId": "servo",
+      "name": "Сервопривод",
+      "type": "actuator",
+      "dimensions": [
+        0.023,
+        0.028,
+        0.012
+      ],
+      "position": [
+        0.0335,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "shoulder",
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.014,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.014,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "upper-arm",
+      "definitionId": "link",
+      "name": "Звено 100 мм",
+      "type": "structure",
+      "dimensions": [
+        0.025,
+        0.1,
+        0.025
+      ],
+      "position": [
+        0,
+        0.05,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "shoulder",
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.05,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.05,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elbow",
+      "definitionId": "joint",
+      "name": "Шарнир",
+      "type": "joint",
+      "dimensions": [
+        0.044,
+        0.035,
+        0.035
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "shoulder",
+      "parameters": {
+        "angle": -0.7
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "servo-elbow",
+      "definitionId": "servo",
+      "name": "Сервопривод",
+      "type": "actuator",
+      "dimensions": [
+        0.023,
+        0.028,
+        0.012
+      ],
+      "position": [
+        0.0335,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "elbow",
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.014,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.014,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "forearm",
+      "definitionId": "link",
+      "name": "Звено 100 мм",
+      "type": "structure",
+      "dimensions": [
+        0.025,
+        0.1,
+        0.025
+      ],
+      "position": [
+        0,
+        0.05,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "elbow",
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.05,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.05,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrist",
+      "definitionId": "joint",
+      "name": "Шарнир",
+      "type": "joint",
+      "dimensions": [
+        0.044,
+        0.035,
+        0.035
+      ],
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "elbow",
+      "parameters": {
+        "angle": -0.4
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0175,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gripper",
+      "definitionId": "gripper",
+      "name": "Захват",
+      "type": "tool",
+      "dimensions": [
+        0.065,
+        0.045,
+        0.025
+      ],
+      "position": [
+        0,
+        0.039,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": "wrist",
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.0225,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.0225,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uno",
+      "definitionId": "uno",
+      "name": "Arduino UNO R3",
+      "type": "electronics",
+      "dimensions": [
+        0.053,
+        0.018,
+        0.069
+      ],
+      "position": [
+        0.1,
+        0.009,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "parentId": null,
+      "parameters": {
+        "angle": 0
+      },
+      "mounts": [
+        {
+          "id": "bottom",
+          "position": [
+            0,
+            -0.009,
+            0
+          ],
+          "axis": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "id": "top",
+          "position": [
+            0,
+            0.009,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
